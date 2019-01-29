@@ -1,0 +1,33 @@
+button {
+	padding: 10px 20px;
+	background: #c1bfbf;
+	cursor: pointer;
+	transition: .3s;
+	color: #fff;
+	&:hover {
+		background: #d8d6d6;
+	}
+}
+
+.create-column {
+	padding: 10px 40px;
+	background: #FF3800;
+	&:hover {
+		background: #FFA128;
+	}
+}
+
+.add-card {
+	background: #06ad2b;
+	&:hover {
+		background: #0ef731;
+	}
+}
+
+.btn-delete {
+	background: #c60505;
+	padding: 5px;
+	&:hover {
+		background: #fc0505;
+	}
+}

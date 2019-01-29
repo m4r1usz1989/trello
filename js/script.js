@@ -1,7 +1,7 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function() {
-    //funkcja generująca id
+
     function randomString() {
         var chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ';
         var str = '';
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return str;
     };
-    //generowanie templatek z index.html
+
     function generateTemplate(name, data, basicElement) {
         var template = document.getElementById(name).innerHTML;
         var element = document.createElement(basicElement || 'div');
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
         return element;
     };
-    //klasa kolumn - tworzenie kolumn
+
     function Column(name) {
         var self = this;
       
@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
             id: this.id 
         });
         
-        //Kasowanie kolumny po kliknięciu w przycisk
         this.element.querySelector('.column').addEventListener('click', function (event) {
             if (event.target.classList.contains('btn-delete')) {
                 self.removeColumn();
@@ -42,16 +41,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    //Prototyp kolumn
+
     Column.prototype = {
-        addCard: function(card) {                                       //dodanie kart
+        addCard: function(card) {                                       
           this.element.querySelector('ul').appendChild(card.element);
         },
-        removeColumn: function() {                                      //usuwanie kolumn
+        removeColumn: function() {                                      
           this.element.parentNode.removeChild(this.element);
         }
     };
-    //klasa kart - tworzenie kart
+
     function Card(description) {
         var self = this;
       
@@ -60,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
         this.element = generateTemplate('card-template', {
             description: this.description 
         }, 'li');
-        //usunięcie karty 
+
         this.element.querySelector('.card').addEventListener('click', function (event) {
             event.stopPropagation();
           
@@ -69,18 +68,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    //prototyp kart
+
     Card.prototype = {
-        removeCard: function() {                                //usunięcie karty
+        removeCard: function() {                                
             this.element.parentNode.removeChild(this.element);
         }
     };
-    //obiekt tablicy
+
     var board = {
         name: 'Kanban Board',
-        addColumn: function(column) {               //tworzenie nowej kolumny
+        addColumn: function(column) {               
           this.element.appendChild(column.element);
-          initSortable(column.id); //About this feature we will tell later
+          initSortable(column.id);
         },
         element: document.querySelector('#board .column-container')
     };
@@ -92,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
           sort: true
         });
     }
-    //kliknięcie w button aby dodać kolumne
+
     document.querySelector('#board .create-column').addEventListener('click', function() {
         var name = prompt('Enter a column name');
         var column = new Column(name);
