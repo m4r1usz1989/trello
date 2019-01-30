@@ -41,3 +41,7 @@ ul { padding: 0; }
 #board .column-container .column ul li { list-style: none; background: #f7f7f7; border-radius: 5px; padding: 5px 10px; cursor: pointer; margin: 10px 0; }
 
 #board .column-container .column ul li:hover { background: #fff; }
+
+/* media */
+@media (max-width: 768px) { #board .column-container { -ms-flex-direction: column; flex-direction: column; -ms-flex-align: center; align-items: center; }
+  #board .column-container div { margin: 10px 0; } }
