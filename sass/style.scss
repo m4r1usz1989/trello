@@ -7,13 +7,21 @@
 
 body {
 	font-family: $body-font;
-	background: #f7f7f7;
+	background: #0075C2;
 	font-size: $body-font-size;
 	padding: 20px;
 }
 
+h1 {
+	color: #fff;
+}
+
 h1, h2 {
 	font-family: $paragraph-font;
+}
+
+ul {
+	padding: 0;
 }
 
 #board {
@@ -28,6 +36,8 @@ h1, h2 {
 		padding: 40px 0;
 		div {
 			display: flex;
+			justify-content: space-between;
+			align-items: center;
 		}
 		.column {
 			padding: 10px;
@@ -38,6 +48,28 @@ h1, h2 {
 			align-items: center;
 			flex-direction: column;
 			min-width: 300px;
+			border-radius: 5px;
+			margin: 0 10px;
+			position: relative;
+			.delete-column {
+				position: absolute;
+				top: 5px;
+				right: 5px;
+			}
+			ul {
+				width: 100%;
+				li {
+					list-style: none;
+					background: #f7f7f7;
+					border-radius: 5px;
+					padding: 5px 10px;
+					cursor: pointer;
+					margin: 10px 0;
+					&:hover {
+						background: #fff;
+					}
+				}
+			}
 		}
 	}
 }

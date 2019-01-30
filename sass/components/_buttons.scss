@@ -4,6 +4,7 @@ button {
 	cursor: pointer;
 	transition: .3s;
 	color: #fff;
+	border-radius: 5px;
 	&:hover {
 		background: #d8d6d6;
 	}
@@ -18,9 +19,9 @@ button {
 }
 
 .add-card {
-	background: #06ad2b;
+	background: #5aac44;
 	&:hover {
-		background: #0ef731;
+		background: #519839;
 	}
 }
 

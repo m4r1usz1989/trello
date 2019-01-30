@@ -1,7 +1,6 @@
-/* Colors */
 /* Font sizes */
 /* Fonts */
-button { padding: 10px 20px; background: #c1bfbf; cursor: pointer; transition: .3s; color: #fff; }
+button { padding: 10px 20px; background: #c1bfbf; cursor: pointer; transition: .3s; color: #fff; border-radius: 5px; }
 
 button:hover { background: #d8d6d6; }
 
@@ -9,9 +8,9 @@ button:hover { background: #d8d6d6; }
 
 .create-column:hover { background: #FFA128; }
 
-.add-card { background: #06ad2b; }
+.add-card { background: #5aac44; }
 
-.add-card:hover { background: #0ef731; }
+.add-card:hover { background: #519839; }
 
 .btn-delete { background: #c60505; padding: 5px; }
 
@@ -19,14 +18,26 @@ button:hover { background: #d8d6d6; }
 
 * { box-sizing: border-box; }
 
-body { font-family: Arial, sans-serif; background: #f7f7f7; font-size: 16px; padding: 20px; }
+body { font-family: Arial, sans-serif; background: #0075C2; font-size: 16px; padding: 20px; }
+
+h1 { color: #fff; }
 
 h1, h2 { font-family: "Poppins", sans-serif; }
+
+ul { padding: 0; }
 
 #board { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-align: center; align-items: center; }
 
 #board .column-container { display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: justify; justify-content: space-between; width: 100%; padding: 40px 0; }
 
-#board .column-container div { display: -ms-flexbox; display: flex; }
+#board .column-container div { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-align: center; align-items: center; }
 
-#board .column-container .column { padding: 10px; background: #ddd; border: 1px #aaa solid; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; -ms-flex-direction: column; flex-direction: column; min-width: 300px; }
+#board .column-container .column { padding: 10px; background: #ddd; border: 1px #aaa solid; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; -ms-flex-direction: column; flex-direction: column; min-width: 300px; border-radius: 5px; margin: 0 10px; position: relative; }
+
+#board .column-container .column .delete-column { position: absolute; top: 5px; right: 5px; }
+
+#board .column-container .column ul { width: 100%; }
+
+#board .column-container .column ul li { list-style: none; background: #f7f7f7; border-radius: 5px; padding: 5px 10px; cursor: pointer; margin: 10px 0; }
+
+#board .column-container .column ul li:hover { background: #fff; }
