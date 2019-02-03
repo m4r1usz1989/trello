@@ -28,15 +28,15 @@ ul { padding: 0; }
 
 #board { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-align: center; align-items: center; }
 
-#board .column-container { display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: justify; justify-content: space-between; width: 100%; padding: 40px 0; }
+#board .column-container { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; width: 100%; padding: 40px 0; }
 
-#board .column-container div { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-align: center; align-items: center; }
+#board .column-container div { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; }
 
 #board .column-container .column { padding: 10px; background: #ddd; border: 1px #aaa solid; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; -ms-flex-direction: column; flex-direction: column; min-width: 300px; border-radius: 5px; margin: 0 10px; position: relative; }
 
 #board .column-container .column .delete-column { position: absolute; top: 5px; right: 5px; }
 
-#board .column-container .column ul { width: 100%; }
+#board .column-container .column ul { width: 100%; min-height: 50px; }
 
 #board .column-container .column ul li { list-style: none; background: #f7f7f7; border-radius: 5px; padding: 5px 10px; cursor: pointer; margin: 10px 0; }
 
